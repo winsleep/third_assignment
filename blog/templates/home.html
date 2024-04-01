@@ -1,0 +1,30 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet"  href="{% static 'home.css' %}">
+</head>
+<body>
+
+    <div><h1 class = 'home_title'><strong>HOME</strong></h1>
+    </div>
+    <div class = home_list>
+        {% for blog in blogs %}
+            <li class = "nodot" style="background-color: rgb(206, 255, 253); color: rgb(103, 105, 92); margin-bottom: 20px; border: 1px solid gray; padding: 10px;" >
+                <h2><strong>{{ blog.title }}</strong></h2>
+                <div><p>
+                    {{ blog.content|truncatechars:7 }}</p>
+                </div>
+                <div>
+                <a href="{% url 'detail' blog_id=blog.id %}" >이동하기</a>
+                </div>
+            </li>
+        {% endfor %}
+        </div>
+</body>
+</html>

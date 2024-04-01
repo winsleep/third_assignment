@@ -1,0 +1,23 @@
+.home_title{
+    text-align: center;
+    
+    padding: 20px;
+  
+    
+}
+
+.home_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  
+.body{
+    background-color: bisque;
+}
+
+.nodot{
+    list-style-type: none;
+
+}
